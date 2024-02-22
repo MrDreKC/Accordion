@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #227093; 
+}
+
+.accordion {
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.accordion-item {
+  background-color: #fff;
+  cursor: pointer;
+  width:400px;
+  user-select: none;
+}
+
+.accordion-item h1{
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: 20px 20px;
+  position: relative; 
+  font-size: 30px; 
+}
+
+.accordion-item h1:hover {
+  color: #1B0307;
+}
+
+.accordion-item h1::after {
+  content: '\0002B';
+  position: absolute;
+  color: black;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  transition: transform .3s ease-in-out;
+}
+
+.accordion-item.open h1::after {
+  transform: translateY(-50%);
+  content: '\0002D';
+}
+
+.accordion-item:nth-child(1) h1 {
+  background-color: #DC143C;
+}
+
+.accordion-item:nth-child(2) h1 {
+  background-color: #E03154;
+}
+
+.accordion-item:nth-child(3) h1 {
+  background-color: #E54F6D;
+}
+
+.accordion-item:nth-child(4) h1 {
+  background-color: #E96C85;
+}
+
+.accordion-item:nth-child(5) h1 {
+  background-color: #ED8A9D;
+}
+
+.accordion-item:nth-child(6) h1 {
+  background-color: #F2A7B6;
+}
+
+.accordion-item:nth-child(7) h1 {
+  background-color: #F6C4CE;
+}
+
+.accordion-item:nth-child(8) h1 {
+  background-color: #FBE2E7;
+}
+
+.accordion-item p {
+  display: none;
+  padding: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.accordion-item.open p {
+  display: block;
+}
